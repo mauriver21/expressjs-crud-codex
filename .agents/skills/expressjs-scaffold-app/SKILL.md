@@ -28,7 +28,8 @@ Create a runnable API baseline from the bundled template, then adapt it to the u
 8. Replace the health example only when the user requests an initial domain feature.
 9. Install dependencies with pnpm only when the request authorizes setup. Run it at the single-repo root or monorepo workspace root, and preserve the resulting lockfile. The generated API package must retain `drizzle-kit` as a development dependency and the `db-generate` script.
 10. Read [references/environment.md](references/environment.md). Create `.env.dev` from `.env.example` and `.env.test` from `.env.test.example`; use an isolated test database and a test-only JWT secret. Never reuse development or production database values for tests.
-11. Verify proportionally:
+11. Read [references/testing.md](references/testing.md). The template's Vitest global setup migrates and seeds the isolated test database only when `TEST_DATABASE_SETUP=true`; enable it after adding a schema and migration.
+12. Verify proportionally:
    - Run TypeScript compilation.
    - Run the health integration test.
    - Run Drizzle generation only after adding a domain schema and with the user's intended database setup.
@@ -42,6 +43,7 @@ Create a runnable API baseline from the bundled template, then adapt it to the u
 - Mount public and authenticated routers under `/api`; apply authentication once to the private router.
 - Use soft deletion and zero-based pagination for conventional CRUD resources unless the user specifies otherwise.
 - Prefer integration tests through Supertest against the exported Express `app`.
+- Keep test-database migration/seeding in `src/tests/globalSetup.ts`, authorization state in `src/tests/testsContext.ts`, and per-resource cleanup beside the integration test.
 
 ## Bundled Resources
 
@@ -51,3 +53,4 @@ Create a runnable API baseline from the bundled template, then adapt it to the u
 - `assets/template/package.json`: Includes `drizzle-kit` and the `db-generate` command for local migration generation.
 - `references/conventions.md`: Layer responsibilities, naming rules, request flow, and feature checklist.
 - `references/environment.md`: Development and test environment-variable contract.
+- `references/testing.md`: Vitest global setup, seeded-test-data, and cleanup strategy.
