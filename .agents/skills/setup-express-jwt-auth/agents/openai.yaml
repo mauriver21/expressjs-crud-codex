@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set Up Express JWT Auth"
+  short_description: "Add JWT login and protected API routes"
+  default_prompt: "Use $setup-express-jwt-auth to add the repository-style JWT authentication flow to this Express API."

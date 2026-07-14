@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Express API Resource"
+  short_description: "Generate a complete layered API resource"
+  default_prompt: "Use $add-express-api-resource to add a layered CRUD or read-only resource to this Express API."

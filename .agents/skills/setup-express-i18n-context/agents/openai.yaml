@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set Up Express i18n Context"
+  short_description: "Add request-scoped API translations"
+  default_prompt: "Use $setup-express-i18n-context to add request-scoped i18next translations to this Express API."

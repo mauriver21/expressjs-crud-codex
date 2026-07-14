@@ -1,0 +1,38 @@
+{
+  "name": "__APP_NAME__",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "build": "tsc && tsc-alias && cp package.json dist/ && cp -r drizzle dist/",
+    "start": "node dist/src/index.js",
+    "test": "vitest run",
+    "db-generate": "drizzle-kit generate",
+    "db-migrate": "tsx src/db/migrate.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.30.10",
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "@types/pg": "^8.11.6",
+    "@types/supertest": "^6.0.2",
+    "drizzle-kit": "^0.21.4",
+    "supertest": "^7.0.0",
+    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.10",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^1.5.0"
+  }
+}
