@@ -23,5 +23,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'node',
+    globalSetup: [path.resolve(__dirname, './src/tests/globalSetup.ts')],
   },
 });
