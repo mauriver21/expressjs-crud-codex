@@ -10,7 +10,8 @@
     "start": "node dist/src/index.js",
     "test": "vitest run",
     "db-generate": "drizzle-kit generate",
-    "db-migrate": "tsx src/db/migrate.ts"
+    "db-migrate": "tsx src/db/migrate.ts",
+    "db-initialize": "tsx src/db/initializeData.ts"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

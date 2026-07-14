@@ -18,6 +18,11 @@ export const config = {
   port: process.env.PORT || 3000,
   jwtExpiresIn: '8h' as SignOptions['expiresIn'],
   jwtSecretKey: process.env.JWT_SECRET_KEY || (environment === 'test' ? 'test-jwt-secret' : undefined),
+  defaultAdmin: {
+    name: process.env.DEFAULT_ADMIN_NAME || 'Administrator',
+    email: process.env.DEFAULT_ADMIN_EMAIL,
+    password: process.env.DEFAULT_ADMIN_PASSWORD,
+  },
   db: {
     dialect: (process.env.DB_DIALECT || 'postgresql') as 'postgresql',
     host: process.env.DB_HOST || '127.0.0.1',
