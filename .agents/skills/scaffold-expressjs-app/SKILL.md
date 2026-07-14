@@ -27,7 +27,7 @@ Create a runnable API baseline from the bundled template, then adapt it to the u
 7. Use `$add-express-api-resource` for complete CRUD or lookup resources, `$setup-express-jwt-auth` for login/protected routes, `$setup-express-i18n-context` for request translations, and `$setup-drizzle-data-initializers` for seed workflows.
 8. Replace the health example only when the user requests an initial domain feature.
 9. Install dependencies with pnpm only when the request authorizes setup. Run it at the single-repo root or monorepo workspace root, and preserve the resulting lockfile.
-10. Copy `.env.example` to the environment-specific file expected by the target runtime and use safe local values; never invent production secrets.
+10. Read [references/environment.md](references/environment.md). Create `.env.dev` from `.env.example` and `.env.test` from `.env.test.example`; use an isolated test database and a test-only JWT secret. Never reuse development or production database values for tests.
 11. Verify proportionally:
    - Run TypeScript compilation.
    - Run the health integration test.
@@ -49,3 +49,4 @@ Create a runnable API baseline from the bundled template, then adapt it to the u
 - `scripts/scaffold.py --layout`: Choose `single` or `monorepo` and create the required pnpm root configuration.
 - `assets/template/`: Runnable, domain-neutral Express/TypeScript starter.
 - `references/conventions.md`: Layer responsibilities, naming rules, request flow, and feature checklist.
+- `references/environment.md`: Development and test environment-variable contract.
