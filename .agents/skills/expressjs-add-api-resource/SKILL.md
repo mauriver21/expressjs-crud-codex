@@ -1,5 +1,5 @@
 ---
-name: add-express-api-resource
+name: expressjs-add-api-resource
 description: Add a complete repository-style Express API resource backed by Drizzle/PostgreSQL. Use when creating CRUD or read-only lookup endpoints and their interfaces, schema, model, repository, controller, Yup validators, public/private routes, migration, and Vitest/Supertest integration tests.
 ---
 
@@ -13,7 +13,7 @@ Obtain or infer the singular and plural names, fields with database/validation c
 
 ## Workflow
 
-1. Confirm `$setup-drizzle-postgres` prerequisites exist. Read [references/resource-contract.md](references/resource-contract.md).
+1. Confirm `$expressjs-setup-drizzle-postgres` prerequisites exist. Read [references/resource-contract.md](references/resource-contract.md).
 2. Inspect routes, existing schemas, and migrations for naming collisions. Stop on a conflict; do not overwrite an entity.
 3. Add one interface per PascalCase file, including create/update/read/list shapes and shared `IdParams`/pagination shapes when absent.
 4. Add a Drizzle table in `src/db/schema/<plural>.ts`, with UUID ID and timestamps. For CRUD, include `deletedAt` and implement soft deletion.

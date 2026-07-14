@@ -1,5 +1,5 @@
 ---
-name: setup-express-jwt-auth
+name: expressjs-setup-jwt-auth
 description: Add the repository-style JWT authentication workflow to a TypeScript Express API. Use when implementing user login, bcrypt password hashing, signed JWT responses, authorization middleware, protected routes, sanitized user output, and authentication integration tests.
 ---
 
@@ -9,7 +9,7 @@ Add authentication as a complete user-boundary workflow. Inspect existing identi
 
 ## Workflow
 
-1. Read [references/auth-contract.md](references/auth-contract.md) and confirm `$setup-drizzle-postgres` is complete.
+1. Read [references/auth-contract.md](references/auth-contract.md) and confirm `$expressjs-setup-drizzle-postgres` is complete.
 2. Reuse a compatible user table (`email`, hashed `password`, stable ID); otherwise explain the required schema change and wait for authorization to create it.
 3. Add `bcrypt`, `jsonwebtoken`, and TypeScript types only if absent. Add `JWT_SECRET_KEY` and an expiry setting to configuration.
 4. Add login DTO/schema, user repository methods for hashing, credential verification, and sanitized responses, then expose `POST /login` on the public router.

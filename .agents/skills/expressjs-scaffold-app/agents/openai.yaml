@@ -1,4 +1,4 @@
 interface:
   display_name: "Scaffold Express.js App"
   short_description: "Scaffold a layered TypeScript Express API"
-  default_prompt: "Use $scaffold-expressjs-app to create a new Express.js API using this repository’s conventions."
+  default_prompt: "Use $expressjs-scaffold-app to create a new Express.js API using this repository’s conventions."

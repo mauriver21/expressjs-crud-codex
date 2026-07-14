@@ -1,5 +1,5 @@
 ---
-name: setup-express-i18n-context
+name: expressjs-setup-i18n-context
 description: Add repository-style request-scoped i18next translation support to a TypeScript Express API. Use when introducing AsyncLocalStorage request context, language middleware, translations, localized error helpers, and integration tests for API localization.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: scaffold-expressjs-app
+name: expressjs-scaffold-app
 description: Scaffold a pnpm-managed TypeScript Express.js API that follows the portal-cms api-service conventions, including factory-based layers, path aliases, public/private routers, PostgreSQL with Drizzle ORM, Yup validation, environment configuration, and Vitest/Supertest integration tests. Use when creating a new single-repository Express API, a pnpm monorepo with an api-service package, or establishing the initial server and folder structure before adding domain features.
 ---
 
@@ -23,8 +23,8 @@ Create a runnable API baseline from the bundled template, then adapt it to the u
 
 4. In monorepo mode, verify the root contains `package.json`, `pnpm-workspace.yaml`, and a root `packageManager`; keep service dependencies in `packages/api/<package-name>/package.json`.
 5. Read [references/conventions.md](references/conventions.md) before adding domain features or changing the generated architecture.
-6. Use `$setup-drizzle-postgres` to retrofit or repair database wiring in an existing service; the generated starter already includes it.
-7. Use `$add-express-api-resource` for complete CRUD or lookup resources, `$setup-express-jwt-auth` for login/protected routes, `$setup-express-i18n-context` for request translations, and `$setup-drizzle-data-initializers` for seed workflows.
+6. Use `$expressjs-setup-drizzle-postgres` to retrofit or repair database wiring in an existing service; the generated starter already includes it.
+7. Use `$expressjs-add-api-resource` for complete CRUD or lookup resources, `$expressjs-setup-jwt-auth` for login/protected routes, `$expressjs-setup-i18n-context` for request translations, and `$expressjs-setup-drizzle-data-initializers` for seed workflows.
 8. Replace the health example only when the user requests an initial domain feature.
 9. Install dependencies with pnpm only when the request authorizes setup. Run it at the single-repo root or monorepo workspace root, and preserve the resulting lockfile.
 10. Read [references/environment.md](references/environment.md). Create `.env.dev` from `.env.example` and `.env.test` from `.env.test.example`; use an isolated test database and a test-only JWT secret. Never reuse development or production database values for tests.

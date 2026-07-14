@@ -1,4 +1,4 @@
 interface:
   display_name: "Review Express API Conventions"
   short_description: "Audit an API against repository conventions"
-  default_prompt: "Use $review-express-api-conventions to audit this Express API and report convention violations."
+  default_prompt: "Use $expressjs-review-api-conventions to audit this Express API and report convention violations."

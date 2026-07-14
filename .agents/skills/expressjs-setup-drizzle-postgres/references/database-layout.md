@@ -16,7 +16,7 @@ Expose `config.db` with `database`, `host`, `password`, `port`, and `user`. Load
 
 ## Package scripts
 
-Keep `db-generate` for `drizzle-kit generate` and `db-migrate` for `tsx src/db/migrate.ts`. Add initialization/reset scripts only through `$setup-drizzle-data-initializers`.
+Keep `db-generate` for `drizzle-kit generate` and `db-migrate` for `tsx src/db/migrate.ts`. Add initialization/reset scripts only through `$expressjs-setup-drizzle-data-initializers`.
 
 ## Verification
 

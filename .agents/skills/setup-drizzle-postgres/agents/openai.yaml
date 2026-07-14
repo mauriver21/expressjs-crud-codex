@@ -1,4 +1,0 @@
-interface:
-  display_name: "Set Up Drizzle PostgreSQL"
-  short_description: "Configure Drizzle and PostgreSQL safely"
-  default_prompt: "Use $setup-drizzle-postgres to add or repair Drizzle PostgreSQL infrastructure in this Express API."

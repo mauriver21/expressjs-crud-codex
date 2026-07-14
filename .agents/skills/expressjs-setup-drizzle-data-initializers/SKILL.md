@@ -1,5 +1,5 @@
 ---
-name: setup-drizzle-data-initializers
+name: expressjs-setup-drizzle-data-initializers
 description: Add repository-style ordered and idempotent data initialization to a Drizzle/PostgreSQL Express API. Use when adding seed tracking, per-entity initializer functions, initialization/reset CLI scripts, or safe development/test database bootstrap workflows.
 ---
 
@@ -9,7 +9,7 @@ Build seed workflows that are ordered, repeatable, and explicit about destructiv
 
 ## Workflow
 
-1. Read [references/initializer-contract.md](references/initializer-contract.md) and confirm `$setup-drizzle-postgres` exists.
+1. Read [references/initializer-contract.md](references/initializer-contract.md) and confirm `$expressjs-setup-drizzle-postgres` exists.
 2. Add the data-initializer tracking schema and a migration only after the user authorizes the database change.
 3. Add one initializer module per dataset and aggregate them in dependency order in `src/db/data-initializers/index.ts`.
 4. Reuse insert/select helpers so each initializer records completion and can skip already-applied work.

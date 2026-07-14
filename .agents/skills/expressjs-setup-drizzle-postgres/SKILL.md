@@ -1,5 +1,5 @@
 ---
-name: setup-drizzle-postgres
+name: expressjs-setup-drizzle-postgres
 description: Configure or repair the repository-style PostgreSQL and Drizzle ORM infrastructure in an existing TypeScript Express API. Use when adding database environment configuration, pg Client singletons, Drizzle clients/configuration, migration commands, or a schema directory without creating domain tables or executing migrations.
 ---
 
@@ -14,7 +14,7 @@ Inspect the target first. Preserve compatible infrastructure and add only missin
 3. Confirm the target uses TypeScript CommonJS and the `@/` aliases, or stop and explain the incompatibility.
 4. Add `pg`, `drizzle-orm`, `drizzle-kit`, and their type packages only when missing; use the target package manager.
 5. Add environment variables, `src/config`, `src/singletons/pgClient`, `src/utils/createDbClient`, `src/db/index.ts`, `drizzle.config.ts`, and migration scripts without overwriting compatible exports.
-6. Create `src/db/schema/` only; leave domain tables and migrations to `$add-express-api-resource`.
+6. Create `src/db/schema/` only; leave domain tables and migrations to `$expressjs-add-api-resource`.
 7. Compile TypeScript. Do not connect to a database, generate migrations, or run migrations unless explicitly requested.
 
 ## Rules

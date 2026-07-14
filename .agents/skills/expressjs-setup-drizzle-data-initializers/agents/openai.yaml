@@ -1,0 +1,4 @@
+interface:
+  display_name: "Set Up Drizzle Data Initializers"
+  short_description: "Add safe ordered database seed workflows"
+  default_prompt: "Use $expressjs-setup-drizzle-data-initializers to add ordered idempotent seed initialization to this Drizzle API."
