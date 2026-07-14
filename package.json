@@ -1,0 +1,11 @@
+{
+  "name": "expressjs-crud-codex",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "dev": "pnpm --filter api-service dev",
+    "build": "pnpm --filter api-service build",
+    "test": "pnpm --filter api-service test"
+  }
+}

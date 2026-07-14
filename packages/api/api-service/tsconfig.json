@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "noEmit": false,
+    "target": "ES2022",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "paths": {
+      "@/config": ["./src/config"],
+      "@/controllers/*": ["./src/controllers/*"],
+      "@/db": ["./src/db"],
+      "@/db/*": ["./src/db/*"],
+      "@/interfaces/*": ["./src/interfaces/*"],
+      "@/middlewares/*": ["./src/middlewares/*"],
+      "@/models/*": ["./src/models/*"],
+      "@/providers/*": ["./src/providers/*"],
+      "@/repositories/*": ["./src/repositories/*"],
+      "@/routes": ["./src/routes"],
+      "@/schemas/*": ["./src/db/schema/*"],
+      "@/singletons/*": ["./src/singletons/*"],
+      "@/tests/*": ["./src/tests/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/validators/*": ["./src/validators/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
