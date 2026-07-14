@@ -1,4 +1,5 @@
 import dotenv from 'dotenv';
+import { SignOptions } from 'jsonwebtoken';
 import path from 'path';
 
 const environment = process.env.NODE_ENV || 'development';
@@ -15,6 +16,8 @@ export const config = {
   environment,
   allowedOrigins: process.env.ALLOWED_ORIGINS?.split(',') || [],
   port: process.env.PORT || 3000,
+  jwtExpiresIn: '8h' as SignOptions['expiresIn'],
+  jwtSecretKey: process.env.JWT_SECRET_KEY || (environment === 'test' ? 'test-jwt-secret' : undefined),
   db: {
     dialect: (process.env.DB_DIALECT || 'postgresql') as 'postgresql',
     host: process.env.DB_HOST || '127.0.0.1',
