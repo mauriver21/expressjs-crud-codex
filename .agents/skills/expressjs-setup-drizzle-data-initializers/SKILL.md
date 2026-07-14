@@ -12,7 +12,7 @@ Build seed workflows that are ordered, repeatable, and explicit about destructiv
 1. Read [references/initializer-contract.md](references/initializer-contract.md) and confirm `$expressjs-setup-drizzle-postgres` exists.
 2. Add the data-initializer tracking schema and a migration only after the user authorizes the database change.
 3. Add one initializer module per dataset and aggregate them in dependency order in `src/db/data-initializers/index.ts`.
-4. Reuse insert/select helpers so each initializer records completion and can skip already-applied work.
+4. Reuse insert/select helpers so each initializer records completion and can skip already-applied work. Use `$expressjs-add-data-initializer` for one domain initializer.
 5. Add `src/db/initializeData.ts` and the `db-initialize` script. Ensure connection cleanup on success and failure.
 6. Add `db-reset` only when explicitly requested. It must prompt for `development` or `test`, set `NODE_ENV` before importing config, and list exact truncated tables.
 7. Test idempotence against an isolated test database only when one is explicitly supplied. Never run initialization or reset against an unspecified database.

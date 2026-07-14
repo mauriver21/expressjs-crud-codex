@@ -1,0 +1,4 @@
+interface:
+  display_name: "Add Data Initializer"
+  short_description: "Add idempotent Drizzle data initialization"
+  default_prompt: "Use $expressjs-add-data-initializer to add an idempotent initializer for this Express.js API."
