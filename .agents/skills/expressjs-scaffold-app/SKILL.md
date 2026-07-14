@@ -28,7 +28,7 @@ Create a runnable API baseline from the bundled template, then adapt it to the u
 8. Replace the health example only when the user requests an initial domain feature.
 9. Install dependencies with pnpm only when the request authorizes setup. Run it at the single-repo root or monorepo workspace root, and preserve the resulting lockfile. The generated API package must retain `drizzle-kit` as a development dependency and the `db-generate` script.
 10. Read [references/environment.md](references/environment.md). Create `.env.dev` from `.env.example` and `.env.test` from `.env.test.example`; use an isolated test database and a test-only JWT secret. Never reuse development or production database values for tests.
-11. Read [references/testing.md](references/testing.md). The template's Vitest global setup migrates and seeds the isolated test database only when `TEST_DATABASE_SETUP=true`; enable it after adding a schema and migration.
+11. Read [references/testing.md](references/testing.md). The template's Vitest global setup automatically migrates the isolated test database when a `drizzle/` migration directory exists.
 12. Verify proportionally:
    - Run TypeScript compilation.
    - Run the health integration test.
